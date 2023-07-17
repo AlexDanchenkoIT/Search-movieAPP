@@ -54,7 +54,7 @@ function getMovies() {
     fetch(`https://www.omdbapi.com/?s=${request}&apikey=418b4501`)
     .then(response => response.json())
     .then(result => {
-        movies = result.Search;
+        const movies = result.Search;
         try{
             renderMovies(movies);
         }
